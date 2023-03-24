@@ -1,7 +1,8 @@
 FROM centos:latest
 LABEL "auther"="asifkhazi248@gmail.com"
 LABEL "Project_Name"="Wedding_website"
-RUN yum install httpd -y
+RUN apt-get install httpd -y
+RUN apt-get install unzip -y
 ADD https://www.tooplate.com/zip-templates/2131_wedding_lite.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip 2131_wedding_lite.zip
