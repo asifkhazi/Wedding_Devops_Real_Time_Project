@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: wedd-service
+  labels:
+    app: wedd-app
+spec:
+  ports:
+     - port: 8080
+       targetPort: 80
+       nodePort: 31200
+  selector:
+    name: wedd-deployment
+  type: LoadBalancer
+    

@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: wedd-deployment
+spec:
+  replicas: 1
+  selector:
+     matchLabels:
+        app: wedd-pod
+  template:
+     metadata:
+       name: Pod
+       labels:
+         app: wedd-pod
+     spec:
+       containers:
+            name: conta
+            image: asifkhazi/demo-pipleine:latest
+            ports:
+              - containerPort: 80

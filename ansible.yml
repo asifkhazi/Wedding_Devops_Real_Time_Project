@@ -1,0 +1,9 @@
+--- #playbook for kubernetes deployent and service
+- hosts: node
+  become: yes
+  connection: ssh
+  tasks:
+     - name: deploy app on kubernetes cluster
+       command: kubectl apply -f /home/ubuntu/deployment.yml
+     - name: attach loadbalancer service to deployment
+       command: kubectl apply -f /home/ubuntu/service.yml
