@@ -1,6 +1,6 @@
 --- #playbook for kubernetes deployent and service
 - hosts: node
-  become: yes
+  become: yes 
   connection: ssh
   tasks:
      - name: deploy app on kubernetes cluster
