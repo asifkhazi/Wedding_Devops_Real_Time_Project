@@ -9,4 +9,4 @@ RUN sudo unzip 2131_wedding_lite.zip
 RUN cp -rvf 2131_wedding_lite/* .
 RUN sudo rm -rf 2131_wedding_lite.zip 2131_wedding_lite
 CMD ["user/sbin/apache2ctl","-D","FOREGROUND"]
-EXPOSE 80 22
+EXPOSE 80
