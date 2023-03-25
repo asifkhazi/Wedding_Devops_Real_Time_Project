@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 LABEL "auther"="asifkhazi248@gmail.com"
-LABEL "Project_Name"="Wedding_website."
+LABEL "Project_name"="Wedding_website."
 RUN apt-get update -y
 RUN apt-get install apache2 -y
 RUN apt-get install unzip -y
